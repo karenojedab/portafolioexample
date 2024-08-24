@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portafolio2</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body> <!--toda la etiqueta body es el background que ocupará el fondo-->
+    <header class="header">
+        <nav class="headerMenu">
+            <a class="headerMenuLink" href="index.html">Home</a>
+            <a class="headerMenuLink" href="about.html">Sobre mí</a>        
+        </nav>
+    </header>
+
+    <main class = "presentacion"> <!--elemento padre-->
+        <section class="presentacionContenido">
+            <h1 class="presentacionContenidoTitulo"> 
+                Eleva tu negocio digital a otro nivel 
+                <strong class ="tituloDestacado"> con un Front-end de calidad!</strong>
+            </h1>
+
+            <p class="presentacionContenidoParrafo">
+                ¡Hola! Soy Ana García, desarrolladora Front-end con especialización en React, HTML y CSS. 
+                Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?
+            </p>
+            
+            <!-- Las etiquetas <button> se usan para para botones y <a> para anclas-->
+            <div class="presentacionEnlaces">
+                <h2 class="presentacionEnlacesSubtitulo">Accede a mis redes</h2>
+                 <a class="presentacionBotones" href="https://github.com/">   
+                    <img src="./assets/github.png">GitHub</a>            
+                <a class="presentacionBotones" href="https://www.linkedin.com/">
+                        <img src="./assets/linkedin.png">LinkedIn</a>           
+                <a class="presentacionBotones" href="https://www.instagram.com/">
+                    <img src="./assets/instagram.png">Instagram</a> 
+                <!--href es para redirigir a una red social o link de internet!-->
+                <!--Se usa a y no buttom ya que no almacene info sino redirige-->
+            </div>
+        </section>
+        <!--Para agregar imagenes con ruta de una carpeta se emplea ./nombredecarpeta/nombredearchivo-->
+        <img class="presentacionImagen" src="./assets/Imagen.png" alt="imagen de Ana García Trabajando"> <!--alt permite la accesibilidad de nuestro proyecto-->
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado por Alura Latam</p>
+    </footer>
+</body>
+</html>

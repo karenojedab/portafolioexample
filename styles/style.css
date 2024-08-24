@@ -1,0 +1,158 @@
+/*@import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap); se elimina ya que a instalar 
+la fuente de Monserrat ya va añadida la fuente de Krona One*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Declarar variable para optimizar el código*/
+:root {
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+    --fuente-titulo: "Krona One", sans-serif;
+    --fuente-principal: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+    /*height: 100vh; *v:viewport, h:altura de la página, para que la página ocupe el 100% de la altura*/
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header {
+    padding: 2% 0% 0% 5%; /*Abajo, arriba, derecha, izquierda*/
+}
+
+.headerMenu {
+    display: flex;
+    gap: 80px;  
+    /*justify-content: center;
+    align-items: center; por si se quiere ajustar al centro*/ 
+}
+
+.headerMenuLink {
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem; /*3rem = 48px, 2rem = 32px, 1rem = 16px*/
+    font-weight: 600; /*Negrita*/
+    color: var(--color-terciario);
+        text-decoration: none;
+    /*margin: 0 10px;
+    padding: 10px 15px; se utilizaría solo si no se configura el header*/
+}
+
+.headerMenuLink:hover {
+    color: var(--color-secundario);
+}
+
+.presentacion {
+    /*margin: 5% 15%;*/ 
+    padding: 5%;
+    display: flex; /*Al usar solo esta propiedad, dará como resultado la visualización de los elementos en una sola linea*/
+    align-items: center; /*Permite centrar los elementos verticalmente*/
+    justify-content: space-between;
+    gap:82px; /*se crea para generar el espacio entre el contenido textual y la imagen*/
+}
+
+.presentacionContenido {
+    width: 50%; /*para cambiar el ancho del contenido del elemento*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacionContenidoTitulo {
+    font-size: 2.25rem;
+    font-family:var(--fuente-titulo);
+}
+
+/*strong {
+    color: #22D4FD;
+} se empleará una "class" en cada strong para estilizar difentes estrucuras dentro de la etiqueta strong*/
+
+.tituloDestacado {
+    color: var(--color-terciario);
+}
+.presentacionContenidoParrafo {
+    /*width: 580px;*/
+    font-size:1.5rem;
+    font-family: var(--fuente-principal);
+}
+
+.presentacionEnlaces {
+    display: flex;
+    flex-direction: column; /*cambiar los botones a una presentación vertical*/
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacionEnlacesSubtitulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.presentacionBotones {
+    display:flex; /*alinea a uno o más elementos en una misma lines por defecto a la izquierda*/
+    justify-content:center; /*se usa justify-content por ser horizontal*/
+    gap: 16px;
+    width: 50%;  /*width: 374px se cambia a porcentaje para adaptarse y ser responsive al tipo de pantalla*/ 
+    border: 2px solid var(--color-terciario);
+    border-radius: 8px; /*dar curvatura a la forma del botón*/
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    font-weight: 600; /*Dar un estilo determinado de Negrita*/
+    color:var(--color-secundario);
+    text-align: center;
+    padding: 21.5px 0; /*espaciado entre botones de redes*/
+    text-decoration: none; /*subrayado*/
+}
+
+/*propiedad Hover para visualizar un cambio de color en el fondo del botón al posicionarse en él*/
+.presentacionBotones:hover { 
+    background-color: var(--color-hover);
+    padding: 3%; /*expande el botón*/
+    border: 2px solid var(--color-terciario);
+    cursor: pointer; /*Cambia el icono del cursor a una mano al posicionar el mouse encima del botón*/
+    background-color: var(--color-hover);
+}
+
+.presentacionImagen {
+    width: 50%; /*responsivez se ajuste a todo tamaño*/
+}
+.footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center; /*se usa text-align al solo tratarse de un texto dentro de un recuadro*/
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    font-weight: 400; /*Regular la negrita*/
+
+}
+
+@media (max-width: 1200px) {
+    
+    .header {
+        padding: 10%;
+    }
+    
+    .headerMenu {
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacionContenido{
+        width: auto; /*el width auto se va adaptar al contenido del elemento padra*/
+
+    }
+}
